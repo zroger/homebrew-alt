@@ -16,6 +16,7 @@ class Phpsh < Formula
     system "#{python.bin}/python", "setup.py", "install",
            "--install-scripts", bin,
            "--install-data", share,
+           "--install-purelib", (lib + 'python2.7/site-packages'),
            "--record", (prefix + 'install.txt')
   end
 end
